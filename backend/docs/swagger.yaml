@@ -1,0 +1,98 @@
+basePath: /api/v1
+definitions:
+  models.SwaggerUser:
+    properties:
+      actived:
+        type: string
+      balance:
+        type: number
+      bankname:
+        type: string
+      banknumber:
+        type: string
+      beforebalance:
+        type: number
+      betamount:
+        type: number
+      createdAt:
+        type: string
+      credit:
+        type: number
+      deletionAt:
+        type: string
+      deposit:
+        type: number
+      firstname:
+        type: string
+      fullname:
+        type: string
+      id:
+        type: integer
+      lastname:
+        type: string
+      lose:
+        type: number
+      otpAuthUrl:
+        type: string
+      partnersKey:
+        type: string
+      password:
+        type: string
+      preferredname:
+        type: string
+      prefix:
+        type: string
+      proID:
+        type: string
+      proStatus:
+        type: string
+      providerPassword:
+        type: string
+      role:
+        type: string
+      salt:
+        type: string
+      secret:
+        type: string
+      status:
+        type: integer
+      tempSecret:
+        type: string
+      token:
+        type: string
+      turnover:
+        type: number
+      updatedAt:
+        type: string
+      username:
+        type: string
+      walletid:
+        type: integer
+      win:
+        type: number
+      withdraw:
+        type: number
+    type: object
+host: localhost:3003
+info:
+  contact: {}
+  description: This is a sample server for Swagger with GORM and MySQL in Go.
+  title: Swagger Example API
+  version: "1.0"
+paths:
+  /users:
+    get:
+      description: Get a list of all users in the database.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.SwaggerUser'
+            type: array
+      summary: Get all users
+      tags:
+      - users
+swagger: "2.0"

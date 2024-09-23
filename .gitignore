@@ -1,0 +1,6 @@
+!database/
+
+database/*
+ /database/*
+ **/node_modules/*
+database/dbdata/ibtmp1
